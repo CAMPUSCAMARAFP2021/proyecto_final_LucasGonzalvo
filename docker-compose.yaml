@@ -1,0 +1,18 @@
+version: '2'
+services:
+  nodejs-server:
+    build:
+      context: ./backend
+  backend:
+    image: node
+    volumes: 
+    - ./backend:/app
+    working_dir: /app
+    command: DEBUG=app:* npm start
+    ports:
+      - 8080:3000  
+  frontend:  
+    image: node
+    volumes: 
+    - ./frontend:/my-app
+    working_dir: /app
