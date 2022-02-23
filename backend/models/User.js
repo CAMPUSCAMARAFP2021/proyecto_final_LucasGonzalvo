@@ -1,8 +1,9 @@
 const {model, Schema} = require ('mongoose');
 
 const schema = new schema({
-    name: string,
-    email: string,
+    ID_Name: String,
+    name: String,
+    email: String,
     views: [
         {type: Schema.Types.ObjectId, ref:'View'}
     ]
