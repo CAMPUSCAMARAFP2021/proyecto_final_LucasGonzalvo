@@ -10,4 +10,5 @@ const schema = new schema({
     ]
 })
 
-model('User', schema);
+model('View', schema);
+module.exports = View;
