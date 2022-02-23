@@ -10,6 +10,7 @@ router.get('/', function(req, res, next) {
 router.post('/',async(req, res, next)=>{
   const {user} = req.body;
   const resultado = await userController.createUser(user);
+
   res.json(resultado);
   
 })
