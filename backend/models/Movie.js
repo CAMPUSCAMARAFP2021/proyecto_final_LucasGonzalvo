@@ -10,5 +10,5 @@ const schema = new schema({
     actors: [{type: Schema.Types.ObjectId, ref:'Actor'}],
 })
 
-model('Movie', schema);
+const Movie = model('Movie', schema);
 module.exports = Movie;
