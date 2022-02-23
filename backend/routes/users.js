@@ -15,4 +15,12 @@ router.post('/',async(req, res, next)=>{
   
 })
 
+router.post('/login',async(req, res, next)=>{
+  const {user, password} = req.body;
+  //const resultado = await userController.createUser(user);
+
+  res.json('pendiente de hacer');
+  
+})
+
 module.exports = router;
