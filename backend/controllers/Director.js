@@ -1,12 +1,22 @@
 const Director = require('../models/Director');
 
-const createActor=async(director)=>{
+const createDirector=async(director)=>{
     return await Director.create(director);
 }
-const updateBrand=async(directorId,director)=>{
+const updateDirector=async(directorId,director)=>{
     return await Director.findById(directorId).update(director);
 }
 
-const deleteBrand=async(director)=>{
+const deleteDirector=async(director)=>{
     return await Director.findByIdAndDelete(directorId);
+}
+const getDirector=async(directorId)=>{
+    return await Director.findById(directorId);
+}
+
+const getDirectors=async()=>{
+    return await Director.find();
+}
+module.exports= {
+    createDirector, updateDirector, deleteDirector, getDirector, getDirectors
 }
