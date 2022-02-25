@@ -11,7 +11,7 @@ router.get('/',  async function(req, res, next) {
 
 /* GET movie */
 router.get('/:id', function(req, res, next) {
-    res.send('respond with a resource');
+    res.send('Movies');
   });
 
 router.post('/',async(req, res, next)=>{
