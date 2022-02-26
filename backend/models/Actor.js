@@ -1,9 +1,8 @@
 const {model, Schema} = require ('mongoose');
 
-const schema = new schema({
-    actorId: Number,
+const schema = new Schema({
     name: String,
   })
 
-model('Actor', schema);
+const Actor = model('Actor', schema);
 module.exports = Actor;

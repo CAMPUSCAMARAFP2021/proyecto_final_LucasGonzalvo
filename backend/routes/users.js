@@ -3,8 +3,15 @@ var router = express.Router();
 const userController = require('../controllers/User');
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+router.get('/', async function(req, res, next) {
+      const users = await userController.getUsers();
+
+  res.send(users);
+});
+
+/* GET USER */
+router.get('/:id', function(req, res, next) {
+  res.send('Users');
 });
 
 router.post('/',async(req, res, next)=>{
