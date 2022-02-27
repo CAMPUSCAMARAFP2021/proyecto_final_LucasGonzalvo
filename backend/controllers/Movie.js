@@ -1,10 +1,13 @@
 const Movie = require('../models/Movie');
+const userController = require('./User');
+const createMovie=async(movie, user)=>{
 
-const createMovie=async(movie)=>{
-    return await Movie.create(movie);
+    const newmovie = await Movie.create(movie);
+    const addmovietouser = await addmovieToUser(user,newmovie);
 }
 const updateMovie=async(movieId,movie)=>{
     return await Movie.findById(movieId).update(movie);
+     
 }
 
 const deleteMovie=async(movieId)=>{
