@@ -7,9 +7,9 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var moviesRouter = require('./routes/movies');
-var actorsRouter = require('./routes/actors');
 var directorsRouter = require('./routes/directors');
-var 
+var authorization = require('./middleware/authoritation');
+ 
 var app = express();
 
 // view engine setup
@@ -24,9 +24,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/movies', moviesRouter);
-app.use('/actors', actorsRouter);
-app.use('/directors', directorsRouter);
+app.use('/movies', authorization, moviesRouter);
+app.use('/directors',directorsRouter)
+
 
 
 // catch 404 and forward to error handler

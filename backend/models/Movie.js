@@ -3,8 +3,9 @@ const {model, Schema} = require ('mongoose');
 const schema = new Schema({
     name: String,
     year: Number,
-    directors: [{type: Schema.Types.ObjectId, ref:'Director'}],
-    
+    plot: String,
+    user: {type: Schema.Types.ObjectId, 
+    ref: 'User'}     
 })
 
 const Movie = model('Movie', schema);

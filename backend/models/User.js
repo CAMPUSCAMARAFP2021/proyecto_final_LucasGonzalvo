@@ -4,9 +4,8 @@ const schema = new Schema({
     name: String,
     email: String,
     password: String,
-    views: [
-        {type: Schema.Types.ObjectId, ref:'View'}
-    ]
+    movies  : [{type: Schema.Types.ObjectId, ref:'Movie'}]
+
 })
 
 const User = model('User', schema);
