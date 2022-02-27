@@ -1,4 +1,6 @@
 MovieSearcher
+
+
 MovieSearcher nació como proyecto final del segundo trimestre del grado de DAM. Este proyecto consiste en un portal en el que el usuario crea, diseñado con [nodejs] con una base de datos hecha en [mongodb].
 
 Comenzando 🚀
