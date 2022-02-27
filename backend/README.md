@@ -42,6 +42,7 @@ Nodejs - para ejecutar la capa del servidor desde javascript
 express - framework web para node, manejar peticiones a la url
 
 Autores
+
 Lucas Gonzalvo - Trabajo principal - Lukis02
 
 Angel Beltrán - Apoyo en Backend
