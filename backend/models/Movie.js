@@ -5,7 +5,9 @@ const schema = new Schema({
     year: Number,
     plot: String,
     user: {type: Schema.Types.ObjectId, 
-    ref: 'User'}     
+    ref: 'User'},
+    director: {type: Schema.Types.ObjectId,
+    ref: 'Director'}    
 })
 
 const Movie = model('Movie', schema);
