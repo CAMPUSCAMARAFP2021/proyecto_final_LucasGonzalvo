@@ -41,6 +41,12 @@ Nodejs - para ejecutar la capa del servidor desde javascript
 
 express - framework web para node, manejar peticiones a la url
 
+mapa de modelos
+
+
+![image](https://user-images.githubusercontent.com/74176312/155902387-a65a2337-81fb-4475-a17b-9af7a8afcb49.png)
+
+
 Autores
 
 Lucas Gonzalvo - Trabajo principal - Lukis02
