@@ -11,13 +11,15 @@ const buildJWB=(user)=>{
     },'contrasenia');
 }
 
-const createUser=async(user)=>{
+const createUser=async(user, password)=>{
     return await User.create(user);
+     
+
 }
 const updateUser=async(userId,User)=>{
     return await User.findById(userId).update(user);
 }
-const login = async (user, password)=>{
+const login = async (user, password)=>{                                            
  const validuser = await User.findOne({user});
  if(!validuser) throw new Error("user not found");
  if(password == validuser.password){
