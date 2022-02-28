@@ -24,12 +24,6 @@ router.post('/',async(req, res, next)=>{
   
 })
 
-router.post('/login',async(req, res, next)=>{
-  const {movie, password} = req.body;
-  //const resultado = await movieController.createmovie(movie);
 
-  res.json('pendiente de hacer');
-  
-})
 
 module.exports = router;

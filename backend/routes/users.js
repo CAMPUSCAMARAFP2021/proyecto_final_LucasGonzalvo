@@ -1,27 +1,33 @@
 var express = require('express');
 var router = express.Router();
 const userController = require('../controllers/User');
-
+const moviesRouter = require('./movies')
 /* GET users listing. */
-router.get('/listing', async function(req, res, next) {
+router.get('/', async function(req, res, next) {
       const users = await userController.getUsers();
 
-  res.send(users);
-  res.json(result);
+  res.json(users);
 });
 
 /* GET USER */
-router.get('/:id', function(req, res, next) {
-  res.send('Users');
+router.get('/:userId', function(req, res, next) {
+  const {userId} = req.params;
+  const user = await userController.getUser(userId);
+
+  res.json(user);
 });
 
-router.post('/signin',async(req, res, next)=>{
+router.post('/',async(req, res, next)=>{
   const {user} = req.body;
   const result = await userController.createUser(user);
 
   res.json(result);
   
 })
+
+router.use('/:userId/movies', function(req, res, next){
+
+},moviesRouter);
 
 router.post('/login',async(req, res, next)=>{
  const user = req.body;
