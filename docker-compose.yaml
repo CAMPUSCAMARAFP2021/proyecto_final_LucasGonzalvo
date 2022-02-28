@@ -8,11 +8,11 @@ services:
     command: npm start
     ports:
       - 3000:3000  
-  # frontend:  
-  #   image: node
-  #   volumes: 
-  #   - ./frontend:/my-app
-  #   working_dir: /app
+  frontend:  
+     image: node
+     volumes: 
+     - ./frontend:/my-app
+     working_dir: /app
 
   mongo:
     image: mongo
