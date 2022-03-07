@@ -3,9 +3,10 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var cors = require('cors')
+var bodyParser = require('body-parser');
 
 var express = require('express')
-var cors = require('cors')
 var app = express()
 
 
@@ -14,24 +15,30 @@ var usersRouter = require('./routes/users');
 var moviesRouter = require('./routes/movies');
 var directorsRouter = require('./routes/directors');
 var authorization = require('./middleware/authoritation');
- 
+const { url } = require('inspector');
+
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
+
+
+app.use(cors())
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(bodyParser.json());
+app.use("./public", express.static("public"));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/movies', authorization, moviesRouter);
 app.use('/directors',directorsRouter);
-app.use(cors())
 
 
 
