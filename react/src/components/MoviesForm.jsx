@@ -41,7 +41,7 @@ const MoviesForm = ({createmovie}) => {
             <label for="precio">año de lanzamiento</label>
             </div>
             <div class="form-floating">
-            <input type="text" class="form-control" id="plot" name="movieplot" onChange={setYear} value={movie.plot}></input>
+            <input type="text" class="form-control" id="plot" name="movieplot" onChange={setPlot} value={movie.plot}></input>
             <label for="precio">sinopsis</label>
             </div>
             <br></br>
