@@ -12,7 +12,7 @@ router.get('/', async function(req, res, next) {
 /* GET USER */
 router.get('/:userId', function(req, res, next) {
   const {userId} = req.params;
-  const user = await userController.getUser(userId);
+  const user =  userController.getUser(userId);
 
   res.json(user);
 });

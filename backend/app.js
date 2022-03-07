@@ -4,6 +4,11 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+var express = require('express')
+var cors = require('cors')
+var app = express()
+
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var moviesRouter = require('./routes/movies');
@@ -25,7 +30,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/movies', authorization, moviesRouter);
-app.use('/directors',directorsRouter)
+app.use('/directors',directorsRouter);
+app.use(cors())
 
 
 

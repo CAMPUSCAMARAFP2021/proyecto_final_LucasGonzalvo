@@ -1,9 +1,9 @@
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import TaskList from './components/TaskList';
+//import 'bootstrap/dist/css/bootstrap.min.css';
+import MovieList from './components/MoviesList';
 import Container from 'react-bootstrap/Container';
 import Login from './components/Login';
-import { login } from './api/authors';
+import { login } from './api/user';
 import { useState } from 'react';
 import LogOutButton from './components/LogOutButton';
 
@@ -22,7 +22,7 @@ const App = () =>{
       <h1 className="header">Welcome To React-Bootstrap</h1>
       {jwt ? <>
         <LogOutButton onLogOut={() => setJwt(false)}></LogOutButton>
-        <TaskList jwt={jwt} />
+        <MovieList jwt={jwt} />
       </> : 
       <Login onLoginClick={onLoginClick}/>}
     </Container>
