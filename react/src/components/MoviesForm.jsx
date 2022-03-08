@@ -32,17 +32,17 @@ const MoviesForm = ({createmovie}) => {
     <br/>
     <h2>Add new movie</h2>
         <form>
-        <div class="form-floating">
-            <input type="text" class="form-control" id="name" name="moviename" onChange={setName} value={movie.name}></input>
-            <label for="nombre">nombre de la película</label><br></br>
+        <div className="form-floating">
+            <input type="text" className="form-control" id="name" name="moviename" onChange={setName} value={movie.name}></input>
+            <label htmlFor="nombre">nombre de la película</label><br></br>
             </div>
-            <div class="form-floating">
-            <input type="text" class="form-control" id="year" name="movieyear" onChange={setYear} value={movie.year}></input>
-            <label for="precio">año de lanzamiento</label>
+            <div className="form-floating">
+            <input type="text" className="form-control" id="year" name="movieyear" onChange={setYear} value={movie.year}></input>
+            <label htmlFor="precio">año de lanzamiento</label>
             </div>
-            <div class="form-floating">
-            <input type="text" class="form-control" id="plot" name="movieplot" onChange={setPlot} value={movie.plot}></input>
-            <label for="precio">sinopsis</label>
+            <div className="form-floating">
+            <input type="text" className="form-control" id="plot" name="movieplot" onChange={setPlot} value={movie.plot}></input>
+            <label htmlFor="precio">sinopsis</label>
             </div>
             <br></br>
         </form>

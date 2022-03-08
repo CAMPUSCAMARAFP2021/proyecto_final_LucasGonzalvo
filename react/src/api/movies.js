@@ -1,4 +1,4 @@
-const getMovie = async (jwt) => {
+const getMovies = async (jwt) => {
     const headers = new Headers();
     headers.append("authorization", jwt);
     return fetch("http://localhost:3000/movies", {headers})
@@ -29,7 +29,7 @@ const deleteMovie = async (movie, jwt) => {
 }
 
 export {
-    getMovie,
+    getMovies,
     createMovie,
     deleteMovie,
 }

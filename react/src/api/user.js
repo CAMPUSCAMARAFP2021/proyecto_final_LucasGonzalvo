@@ -5,7 +5,7 @@ const login = async (user, password) => {
     const requestOptions = {
         method: 'POST', headers, body,redirect: 'follow'
     };
-    return fetch("http://localhost:3000/user/login", requestOptions)
+    return fetch("http://localhost:3000/users/login", requestOptions)
         .then(response => response.json());
 }
 const register=async (name,pass)=>{
@@ -15,7 +15,7 @@ const register=async (name,pass)=>{
     const requestOptions = {
         method: 'POST', headers, body,redirect: 'follow'
     };
-    return fetch("http://localhost:3000/user/", requestOptions)
+    return fetch("http://localhost:3000/users/", requestOptions)
         .then(response => response.json());
 }
 

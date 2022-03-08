@@ -8,8 +8,7 @@ const schema = new Schema({
     ref: 'User'},
     director: {type: Schema.Types.ObjectId,
     ref: 'Director'},
-    actors:[ {type: Schema.Types.ObjectId,
-      ref: 'Actor'}]
+
 })
 
 const Movie = model('Movie', schema);

@@ -32,6 +32,7 @@ router.use('/:userId/movies', function(req, res, next){
 router.post('/login',async(req, res, next)=>{
  const user = req.body;
  const {name, password} = user;
+ console.log(user);
  const result = await userController.login(name, password);
  res.json (result);
 })

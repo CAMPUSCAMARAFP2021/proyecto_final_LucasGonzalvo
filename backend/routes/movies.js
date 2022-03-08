@@ -17,12 +17,17 @@ router.get('/:id', function(req, res, next) {
 router.post('/',async(req, res, next)=>{
   const {movie} = req.body;
   const {user} = req.user;
-  movie.user = user._id;
+  movie.user = user.Id;
   const resultado = await movieController.createMovie(movie, user);
 
   res.json(resultado);
+  });
   
-})
+router.delete('/:id', async(req,res) => {
+  const {id} = req.params;
+  const result = await movieController.deleteMovie(id);
+  res.json(result);
+});
 
 
 
