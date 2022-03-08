@@ -7,7 +7,7 @@ const Movie = ({movie, onDelete}) =>
         <Card.Body>
             <Card.Title>{movie.name}</Card.Title>
             <Card.Title>{movie.year}</Card.Title>
-            <Card.Text>precio:{movie.plot}€</Card.Text>
+            <Card.Text>plot:{movie.plot}€</Card.Text>
             <Button variant="primary" onClick={onDelete}>Eliminar</Button>
         </Card.Body>
     </Card>

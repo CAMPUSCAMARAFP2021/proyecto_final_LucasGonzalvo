@@ -16,9 +16,9 @@ router.get('/:id', function(req, res, next) {
 
 router.post('/',async(req, res, next)=>{
   const {movie} = req.body;
-  const {user} = req.user;
-  movie.user = user.Id;
-  const resultado = await movieController.createMovie(movie, user);
+  movie.user = req.user;
+
+  const resultado = await movieController.createMovie(movie, req.user);
 
   res.json(resultado);
   });

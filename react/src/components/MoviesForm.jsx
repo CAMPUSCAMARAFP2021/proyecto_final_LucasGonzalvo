@@ -38,11 +38,11 @@ const MoviesForm = ({createmovie}) => {
             </div>
             <div className="form-floating">
             <input type="text" className="form-control" id="year" name="movieyear" onChange={setYear} value={movie.year}></input>
-            <label htmlFor="precio">año de lanzamiento</label>
+            <label htmlFor="year">año de lanzamiento</label>
             </div>
             <div className="form-floating">
             <input type="text" className="form-control" id="plot" name="movieplot" onChange={setPlot} value={movie.plot}></input>
-            <label htmlFor="precio">sinopsis</label>
+            <label htmlFor="plot">sinopsis</label>
             </div>
             <br></br>
         </form>
