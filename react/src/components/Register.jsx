@@ -16,7 +16,7 @@ const Register = ({onRegisterClick}) => {
         <h1>Please register</h1>
         <div>
         <input type="text"id="username" name={user} onChange={inputUserHandler}></input><br/>
-        <label for="username">Brand name</label>
+        <label for="username">User</label>
         </div>
         <div>
         <input type="password"id="password" name={password} onChange={inputPasswordHandler}></input><br/>

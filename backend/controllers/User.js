@@ -11,9 +11,8 @@ const buildJWB=(user)=>{
     },'contrasenia');
 }
 
-const createUser=async(user)=>{
-    const newuser= await User.create(user);
-     return buildJWB(newuser);
+const createUser=async(user, password)=>{
+    return await User.create(user);
 
 }
 const updateUser=async(userId,User)=>{
