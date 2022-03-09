@@ -18,8 +18,8 @@ const getMovie=async(movieId)=>{
     return await Movie.findById(movieId);
 }
 
-const getMovies=async()=>{
-    return await Movie.find();
+const getMovies=async(user)=>{
+    return await Movie.find({user});
 }
 module.exports= {
     createMovie, updateMovie, deleteMovie, getMovie, getMovies

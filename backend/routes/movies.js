@@ -4,7 +4,8 @@ const movieController = require('../controllers/Movie');
 
 /* GET movies listing. */
 router.get('/',  async function(req, res, next) {
-     const movies = await movieController.getMovies(req);
+     const user = req.user;
+     const movies = await movieController.getMovies(user);
     
   res.send(movies);
 });
