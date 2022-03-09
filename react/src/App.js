@@ -25,7 +25,7 @@ const App = () =>{
   
  return <Container className="p-3">
     <Container className="p-5 mb-4 bg-light rounded-3">
-      <h1 className="header">Welcome To React-Bootstrap</h1>
+      <h1 className="header"> MovieSearcher</h1>
       {jwt ? <>
         <LogOutButton onLogOut={() => setJwt(false)}></LogOutButton>
         <MovieList jwt={jwt} />
