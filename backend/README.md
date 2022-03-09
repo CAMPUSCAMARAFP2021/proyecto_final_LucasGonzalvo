@@ -27,6 +27,7 @@ Herramientas utilizadas:
 -Node JS 10 +
 
 -Nodemon
+
 pasos
 
 1- instalar docker, ubuntu y visual studio code (wsl2 y extensiones de docker)
@@ -66,7 +67,6 @@ ubuntu
 
 Instalación 🔧
 
-
 ejecutar el comando $docker compose up
 
 Recursos utilizados
@@ -91,7 +91,9 @@ Antonio Castillo - Apoyo en frontend
 
 Lucía Calabrese: Apoyo en backend
 
+
 Expresiones de Gratitud 🎁
+
 Le debo una monster y unas pizzas a Ángel.
 tres kit kats para lucía
 Un cordial agradecimiento al profesor David Pestana por su asesoramiento y su ayuda durante el proyecto.
