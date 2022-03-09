@@ -19,6 +19,7 @@ router.get('/:userId', function(req, res, next) {
 
 router.post('/',async(req, res, next)=>{
   const {user} = req.body;
+  console.log(user)
   const result = await userController.createUser(user);
 
   res.json(result);

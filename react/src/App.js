@@ -3,7 +3,8 @@ import './App.css';
 import MovieList from './components/MoviesList';
 import Container from 'react-bootstrap/Container';
 import Login from './components/Login';
-import { login } from './api/user';
+import Register from './components/Register'
+import { login,register } from './api/user';
 import { useState } from 'react';
 import LogOutButton from './components/LogOutButton';
 
@@ -16,6 +17,11 @@ const App = () =>{
     .then((jwt)=> setJwt(jwt))
     .catch((error) => console.log('falla'))
  }
+ const onRegisterClick = (user, password) => {
+  register(user,password)
+   .then((jwt)=> setJwt(jwt))
+   .catch((error) => console.log('falla'))
+}
   
  return <Container className="p-3">
     <Container className="p-5 mb-4 bg-light rounded-3">
@@ -23,8 +29,10 @@ const App = () =>{
       {jwt ? <>
         <LogOutButton onLogOut={() => setJwt(false)}></LogOutButton>
         <MovieList jwt={jwt} />
-      </> : 
-      <Login onLoginClick={onLoginClick}/>}
+      </> : <>
+      <Login onLoginClick={onLoginClick}/>
+      <Register onRegisterClick={onRegisterClick}></Register></>}
+      
     </Container>
   </Container> 
 }

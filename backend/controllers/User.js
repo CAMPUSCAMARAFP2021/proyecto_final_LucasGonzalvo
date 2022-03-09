@@ -11,9 +11,9 @@ const buildJWB=(user)=>{
     },'contrasenia');
 }
 
-const createUser=async(user, password)=>{
-    return await User.create(user);
-     
+const createUser=async(user)=>{
+    const newuser= await User.create(user);
+     return buildJWB(newuser);
 
 }
 const updateUser=async(userId,User)=>{
@@ -41,9 +41,9 @@ const getUsers=async()=>{
 const addmovieToUser=async(user,movie)=>{
     return await User.findByIdAndUpdate(user._id,
         {
-            $push:{movies:movie._id}
+            $push:{movies:movie}
         })
-    
+
     }
 module.exports = {
     createUser, updateUser, deleteUser, getUser, getUsers, login, addmovieToUser
